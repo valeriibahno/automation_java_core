@@ -51,7 +51,7 @@ public class Tasks {
         do {
             number = scanner.nextInt();
             sum += number;
-            count = count + 1;
+            count++;
 
         } while(number != 0);
 
@@ -90,10 +90,13 @@ public class Tasks {
         System.out.println("Enter your number n: ");
         double n = scanner.nextDouble();
 
-        if(Math.abs(m - ten) > Math.abs(n - ten)) {
+        double differenceM_ten = Math.abs(m - ten);
+        double differenceN_ten = Math.abs(n - ten);
+
+        if(differenceM_ten > differenceN_ten) {
             System.out.println("The closest to ten is " + n);
         }
-        else if(Math.abs(n - ten) > Math.abs(m - ten)) {
+        else if(differenceN_ten > differenceM_ten) {
             System.out.println("The closest to ten is " + m);
         }
         else {
