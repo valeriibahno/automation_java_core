@@ -1,8 +1,9 @@
 package homeWork3.task2;
 
-public class RobotCooker extends Robot{
+public class RobotCooker extends Robot {
 
-    RobotCooker() {
-        super("RobotCooker", "просто готую");
+    @Override
+    public void work() {
+        System.out.println("Я RobotCooker – я просто готую");
     }
 }
