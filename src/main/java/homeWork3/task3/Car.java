@@ -98,13 +98,13 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Машина з пасажиром: " + brand + ", " + model + ", макс. швидкість: " + speed + " км/ч" + ", стан: " + (isNew ? "нова" : "вживана") +
+        return "Машина з пасажиром: " + brand + ", " + model + ", макс. швидкість: " + speed + " км/год" + ", стан: " + (isNew ? "нова" : "вживана") +
                 ", \nінформація про " + steeringWheel.toString() + ", \nінформація про " + wheel.toString() +
                 ", \nінформація про " + body.toString() + ", \nінформація про " + passenger.toString();
     }
 
     public String toStringWithoutPass() {
-        return "Машина без пасажира: " + brand + ", " + model + ", макс. швидкість: " + speed + " км/ч" + ", стан: " + (isNew ? "нова" : "вживана") +
+        return "Машина без пасажира: " + brand + ", " + model + ", макс. швидкість: " + speed + " км/год" + ", стан: " + (isNew ? "нова" : "вживана") +
                 ", \nінформація про " + steeringWheel.toString() + ", \nінформація про " + wheel.toString() +
                 ", \nінформація про " + body.toString();
     }
@@ -115,7 +115,7 @@ public class Car {
             System.out.println("Машина з пасажиром почала рух:");
 
             for (int i = startSpeed; i <= speed; i++) {
-                System.out.println("Швидкість: " + i + " км/г");
+                System.out.println("Швидкість: " + i + " км/год");
                 i += 30;
             }
         }
@@ -123,11 +123,11 @@ public class Car {
             System.out.println("Машина без пасажира почала рух:");
 
             for (int i = startSpeed; i <= speed; i++) {
-                System.out.println("Швидкість: " + i + " км/г");
+                System.out.println("Швидкість: " + i + " км/год");
                 i += 50;
             }
         }
-        System.out.println("Максимальна швидкість " + getBrand() + " " + getModel() + ": " + speed + " км/г");
+        System.out.println("Максимальна швидкість " + getBrand() + " " + getModel() + ": " + speed + " км/год");
     }
 
     public void priceCar(int startPrice) {
