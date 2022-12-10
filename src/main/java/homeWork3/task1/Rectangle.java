@@ -16,12 +16,10 @@ public class Rectangle {
     }
 
     public void area() {
-        int area = this.length * this.width;
-        System.out.println("Площа прямокутника = " + area);
+        System.out.println("Площа прямокутника = " + length * width);
     }
 
     public void perimeter() {
-        int perimeter = (this.length + this.width) * 2;
-        System.out.println("Периметр прямокутника = " + perimeter);
+        System.out.println("Периметр прямокутника = " + (length + width) * 2);
     }
 }
