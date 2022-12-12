@@ -7,8 +7,16 @@ public class EmployeeFixSalary implements Salary {
         this.salary = salary;
     }
 
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
     @Override
     public void salary() {
-        System.out.println("Працівник з фіксованою місячною зарплатою має зарплату = " + salary + " грн.");
+        System.out.println("An employee with a fixed monthly salary has a salary = " + salary + " UAH");
     }
 }

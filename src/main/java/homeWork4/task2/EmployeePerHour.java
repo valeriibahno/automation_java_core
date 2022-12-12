@@ -10,9 +10,25 @@ public class EmployeePerHour implements Salary {
         this.salary = salary;
     }
 
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
     @Override
     public void salary() {
-        System.out.println("Працівник з погодинною зарплатою має зарплату = " + salary * hours + " грн.");
+        System.out.println("An hourly wage worker has a salary = " + salary * hours + " UAH");
 
     }
 }

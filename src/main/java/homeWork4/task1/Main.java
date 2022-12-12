@@ -3,8 +3,8 @@ package homeWork4.task1;
 public class Main {
 
     public static void main(String[] args) {
-        Rose rose = new Rose("роза", "червоний", 100, true);
-        Rose rose2 = new Rose("роза", "червоний", 100, false);
+        Rose rose = new Rose("rose", "red", 100, true);
+        Rose rose2 = new Rose("rose", "red", 100, false);
         rose.describeRose();
         rose2.describeRose();
         rose.calculatePrice(true);
@@ -12,8 +12,8 @@ public class Main {
 
         System.out.println("============");
 
-        Tulip tulip = new Tulip("тюльпан", "жовтий", 80, true);
-        Tulip tulip2 = new Tulip("тюльпан", "білий", 80, false);
+        Tulip tulip = new Tulip("tulip", "yellow", 80, true);
+        Tulip tulip2 = new Tulip("tulip", "white", 80, false);
         tulip.describeTulip();
         tulip2.describeTulip();
         tulip.calculatePrice(true);
@@ -21,9 +21,9 @@ public class Main {
 
         System.out.println("============");
 
-        Chamomile chamomile = new Chamomile("ромашка", "біла", 60, 17);
-        Chamomile chamomile2 = new Chamomile("ромашка", "рожева", 40, 10);
-        Chamomile chamomile3 = new Chamomile("ромашка", "жовта", 40, 4);
+        Chamomile chamomile = new Chamomile("chamomile", "white", 60, 17);
+        Chamomile chamomile2 = new Chamomile("chamomile", "pink", 40, 10);
+        Chamomile chamomile3 = new Chamomile("chamomile", "yellow", 40, 4);
         chamomile.describeChamomile();
         chamomile2.describeChamomile();
         chamomile3.describeChamomile();
@@ -33,9 +33,9 @@ public class Main {
 
         System.out.println("============");
 
-        Peony peony = new Peony("піон", "білий", 70, "зелений");
-        Peony peony2 = new Peony("піон", "червоний", 90, "блідно-зелений");
-        Peony peony3 = new Peony("піон", "жовтий", 50, "жовто-зелений");
+        Peony peony = new Peony("peony", "white", 70, "green");
+        Peony peony2 = new Peony("peony", "red", 90, "pale green");
+        Peony peony3 = new Peony("peony", "yellow", 50, "yellow-green");
         peony.describePeony();
         peony2.describePeony();
         peony3.describePeony();
