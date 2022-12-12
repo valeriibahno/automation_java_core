@@ -98,36 +98,36 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Машина з пасажиром: " + brand + ", " + model + ", макс. швидкість: " + speed + " км/год" + ", стан: " + (isNew ? "нова" : "вживана") +
-                ", \nінформація про " + steeringWheel.toString() + ", \nінформація про " + wheel.toString() +
-                ", \nінформація про " + body.toString() + ", \nінформація про " + passenger.toString();
+        return "Car with passenger: " + brand + ", " + model + ", max. speed: " + speed + " km/h" + ", state: " + (isNew ? "new" : "used") +
+                ", \ninfo about " + steeringWheel.toString() + ", \ninfo about " + wheel.toString() +
+                ", \ninfo about " + body.toString() + ", \ninfo about " + passenger.toString();
     }
 
     public String toStringWithoutPass() {
-        return "Машина без пасажира: " + brand + ", " + model + ", макс. швидкість: " + speed + " км/год" + ", стан: " + (isNew ? "нова" : "вживана") +
-                ", \nінформація про " + steeringWheel.toString() + ", \nінформація про " + wheel.toString() +
-                ", \nінформація про " + body.toString();
+        return "Car without passenger: " + brand + ", " + model + ", max. speed: " + speed + " km/h" + ", state: " + (isNew ? "new" : "used") +
+                ", \ninfo about " + steeringWheel.toString() + ", \ninfo about " + wheel.toString() +
+                ", \ninfo about " + body.toString();
     }
 
     public void moveCar(int startSpeed, boolean hasPassenger) {
 
         if(hasPassenger) {
-            System.out.println("Машина з пасажиром почала рух:");
+            System.out.println("Car with passenger has started:");
 
             for (int i = startSpeed; i <= speed; i++) {
-                System.out.println("Швидкість: " + i + " км/год");
+                System.out.println("Speed: " + i + " km/h");
                 i += 30;
             }
         }
         else {
-            System.out.println("Машина без пасажира почала рух:");
+            System.out.println("Car without passenger has started:");
 
             for (int i = startSpeed; i <= speed; i++) {
-                System.out.println("Швидкість: " + i + " км/год");
+                System.out.println("Speed: " + i + " km/h");
                 i += 50;
             }
         }
-        System.out.println("Максимальна швидкість " + getBrand() + " " + getModel() + ": " + speed + " км/год");
+        System.out.println("Max speed " + getBrand() + " " + getModel() + ": " + speed + " km/h");
     }
 
     public void priceCar(int startPrice) {
@@ -144,7 +144,7 @@ public class Car {
         SteeringWheel steeringWheel = new SteeringWheel("Black", 15, true);
         Wheel wheel = new Wheel(18, "Winter", true);
         Body body = new Body("SUV", "Red Crystal", false);
-        Passenger passenger = new Passenger("Валерій", 33, true);
+        Passenger passenger = new Passenger("Valerii", 33, true);
 
         Car carWithoutPassenger = new Car("Honda", "Pilot", 150,false, steeringWheel, wheel, body);
         Car carWithPassenger = new Car("Mazda", "CX-5", 200, true, steeringWheel, wheel, body, passenger);
@@ -157,9 +157,9 @@ public class Car {
         System.out.println("================");
         carWithPassenger.moveCar(5, true);
         System.out.println("================");
-        System.out.println("Ціна вживаної машини:");
+        System.out.println("The price of a used car:");
         carWithoutPassenger.priceCar(10000);
-        System.out.println("Ціна нової машини:");
+        System.out.println("The price of a new car:");
         carWithPassenger.priceCar(20000);
     }
 }

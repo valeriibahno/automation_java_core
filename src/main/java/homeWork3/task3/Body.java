@@ -38,15 +38,15 @@ public class Body {
 
     @Override
     public String toString() {
-        return "кузов: тип - " + type + ", колір - " + colour + ", була в аваріях - " + (isCrashed ? "так" : "не була");
+        return "body: type - " + type + ", colour - " + colour + ", isCrashed - " + (isCrashed ? "yes" : "no");
     }
 
     public void changeColour(String newColour) {
         if(this.colour.equals(newColour)) {
-            System.out.println("Актуальний колір кузова");
+            System.out.println("Current body color");
         }
         else {
-            System.out.println("Новий колір кузова: " + newColour);
+            System.out.println("New body color: " + newColour);
         }
     }
 }

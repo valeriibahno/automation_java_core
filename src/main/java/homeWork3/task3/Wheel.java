@@ -3,12 +3,12 @@ package homeWork3.task3;
 public class Wheel {
 
     private int radius;
-    private String reason;
+    private String season;
     private boolean isSpiked;
 
-    public Wheel(int radius, String reason, boolean isSpiked) {
+    public Wheel(int radius, String season, boolean isSpiked) {
         this.radius = radius;
-        this.reason = reason;
+        this.season = season;
         this.isSpiked = isSpiked;
     }
 
@@ -16,8 +16,8 @@ public class Wheel {
         return radius;
     }
 
-    public String getReason() {
-        return reason;
+    public String getSeason() {
+        return season;
     }
 
     public boolean isSpiked() {
@@ -28,8 +28,8 @@ public class Wheel {
         this.radius = radius;
     }
 
-    public void setReason(String reason) {
-        this.reason = reason;
+    public void setSeason(String season) {
+        this.season = season;
     }
 
     public void setIsSpiked(boolean isSpiked) {
@@ -38,35 +38,35 @@ public class Wheel {
 
     @Override
     public String toString() {
-        return "колеса: ромір - " + radius + ", сезон - " + reason + ", шипована - " + (isSpiked ? "так" : "ні");
+        return "wheel: radius - " + radius + ", season - " + season + ", spiked - " + (isSpiked ? "yes" : "no");
     }
 
-    public void kindOfWheelYouNeed(String reason) {
+    public void kindOfWheelYouNeed(String season) {
 
-        switch (reason) {
+        switch (season) {
             case "Winter":
-                System.out.println("Вам потрібна зимова гума, бажано шипована");
+                System.out.println("You need winter tires, preferably spiked");
                 break;
             case "Spring":
-                System.out.println("Вам потрібна всесезона або літня гума");
+                System.out.println("You need an all-season or summer tire");
                 break;
             case "Summer":
-                System.out.println("Вам потрібна літня гума");
+                System.out.println("You need a summer tire");
                 break;
             case "Autumn":
-                System.out.println("Вам потрібна всесезона гума");
+                System.out.println("You need an all-season tire");
                 break;
             default:
-                System.out.println("Ви вказали неіснуючу пори року, спробуйте ще раз");
+                System.out.println("You specified a non-existent season, please try again");
         }
     }
 
     public void chooseWheel(boolean isSpiked) {
         if(isSpiked) {
-            System.out.println("Шипована гума");
+            System.out.println("Spiked tire");
         }
         else {
-            System.out.println("Нешипована гума");
+            System.out.println("Non-spiked tire");
         }
     }
 }

@@ -38,10 +38,10 @@ public class SteeringWheel {
 
     @Override
     public String toString() {
-        return "кермо: колір - " + colour + ", діаметр - " + diameter + ", кожане покриття - " + (isLeather ? "так" : "ні");
+        return "steering Wheel: colour - " + colour + ", diameter - " + diameter + ", leather cover - " + (isLeather ? "yes" : "no");
     }
 
     public void spinsSteeringWheel(int number) {
-        System.out.println("Кількість оборотів кермом: " + this.diameter * number);
+        System.out.println("The number of revolutions of the steering wheel: " + this.diameter * number);
     }
 }

@@ -38,15 +38,15 @@ public class Passenger {
 
     @Override
     public String toString() {
-        return "пасажира: ім'я - " + name + ", вік - " + age + ", зареєстрован - " + (isRegistered ? "так" : "ні");
+        return "passenger: name - " + name + ", age - " + age + ", isRegistered - " + (isRegistered ? "yes" : "no");
     }
 
     public void registeredNewPassenger(String newName) {
         if(!name.equals(newName)) {
-            System.out.println("Нового пасажира зареєстровано: " + newName);
+            System.out.println("A new passenger has been registered: " + newName);
         }
         else {
-            System.out.println("Пасажир вже зареєстрований");
+            System.out.println("The passenger is already registered");
         }
     }
 }
