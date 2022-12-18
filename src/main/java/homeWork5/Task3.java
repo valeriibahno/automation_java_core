@@ -35,5 +35,6 @@ public class Task3 {
             logger.info("The length of the shortest entered word is: " + minLengthWord.length());
             logger.info("Position of the shortest entered word is: " + numberOfMinPosition);
         }
+        logger.error("User entered 'stop' and program was stopped");
     }
 }

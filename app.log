@@ -39,3 +39,6 @@
 2022-12-18 19:57:11 FATAL Task3: 63 - ===========
 2022-12-18 19:57:24 FATAL Task3: 61 - ===========
 2022-12-18 19:57:24 FATAL Task3: 63 - ===========
+2022-12-18 21:26:28 ERROR Task3: 38 - User entered 'stop' and program was stopped
+2022-12-18 21:27:19 ERROR Task2: 68 - Your entered text 'I like Java very much' doesn't contain substring - Lava
+2022-12-18 21:27:33 ERROR Task2: 84 - Your entered text 'I like Java very much' doesn't contain symbol 'g' for replacing
