@@ -31,6 +31,7 @@ public class Task1 {
     }
 
     public static void main(String[] args) {
+
         logger.info("Program is starting");
         verifyIsIntegerEven();
         logger.info("Program is finishing");
