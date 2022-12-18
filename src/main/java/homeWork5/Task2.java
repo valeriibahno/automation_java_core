@@ -111,7 +111,7 @@ public class Task2 {
 
     public static void main(String[] args) {
 
-        logger.debug("Enter your text:" );
+        logger.info("Enter your text:" );
         Scanner scanner = new Scanner(System.in);
         String enteredText = scanner.nextLine();
 
