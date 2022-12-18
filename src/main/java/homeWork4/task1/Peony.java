@@ -18,17 +18,18 @@ public class Peony extends Flower {
     }
 
     @Override
-    void calculatePrice(boolean isFresh) {
+    public double calculatePrice(boolean isFresh) {
 
         if(isFresh && colour.equals("red")) {
-            System.out.println("The price of 1 fresh red peony = " + price * 1.25);
+            price = price * 1.25;
         }
         else if(isFresh && colour.equals("white")) {
-            System.out.println("The price of 1 fresh white peony = " + price * 1.1);
+            price = price * 1.1;
         }
         else {
-            System.out.println("The price of 1 stale peony = " + price * 0.4);
+            price = price * 0.4;
         }
+        return price;
     }
 
     void describePeony() {

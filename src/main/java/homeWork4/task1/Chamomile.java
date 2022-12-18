@@ -18,17 +18,18 @@ public class Chamomile extends Flower {
     }
 
     @Override
-    void calculatePrice(boolean isFresh) {
+    public double calculatePrice(boolean isFresh) {
 
         if(isFresh && petals > 14) {
-            System.out.println("The price of 1 fresh large chamomile = " + price * 1.3);
+            price = price * 1.3;
         }
         else if(isFresh && petals > 6) {
-            System.out.println("The price of 1 fresh medium chamomile = " + price * 1.2);
+            price = price * 1.2;
         }
         else {
-            System.out.println("The price of 1 stale small chamomile = " + price * 0.5);
+            price = price * 0.5;
         }
+        return price;
     }
 
     void describeChamomile() {

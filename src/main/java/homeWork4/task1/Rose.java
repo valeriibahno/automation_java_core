@@ -12,20 +12,21 @@ public class Rose extends Flower{
         isSpiked = spiked;
     }
 
-    public Rose(String name, String colour, int price, boolean isSpiked) {
+    public Rose(String name, String colour, double price, boolean isSpiked) {
         super(name, colour, price);
         this.isSpiked = isSpiked;
     }
 
     @Override
-    void calculatePrice(boolean isFresh) {
+    public double calculatePrice(boolean isFresh) {
 
         if(isFresh && isSpiked) {
-            System.out.println("The price of 1 fresh rose with spikes = " + price * 1.5);
+            price = price * 1.5;
         }
         else {
-            System.out.println("The price of 1 stale rose = " + price * 0.8);
+            price = price * 0.8;
         }
+        return price;
     }
 
     void describeRose() {

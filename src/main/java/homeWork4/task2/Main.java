@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         EmployeeFixSalary employeeFixSalary = new EmployeeFixSalary(10000);
-        employeeFixSalary.salary();
+        employeeFixSalary.printSalary();
 
         EmployeePerHour employeePerHour = new EmployeePerHour(160, 70);
-        employeePerHour.salary();
+        employeePerHour.printSalary();
     }
 }

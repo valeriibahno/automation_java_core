@@ -18,14 +18,15 @@ public class Tulip extends Flower {
     }
 
     @Override
-    void calculatePrice(boolean isFresh) {
+    public double calculatePrice(boolean isFresh) {
 
         if(isFresh && hasLeaves) {
-            System.out.println("The price of 1 fresh tulip with leaves = " + price * 1.2);
+            price = price * 1.2;
         }
         else {
-            System.out.println("The price of 1 stale tulip without leaves = " + price * 0.7);
+            price = price * 0.7;
         }
+        return price;
     }
 
     void describeTulip() {

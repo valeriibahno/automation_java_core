@@ -4,13 +4,13 @@ public abstract class Flower {
 
     String name;
     String colour;
-    int price;
+    double price;
 
-    public Flower(String name, String colour, int price) {
+    public Flower(String name, String colour, double price) {
         this.name = name;
         this.colour = colour;
         this.price = price;
     }
 
-    abstract void calculatePrice(boolean isFresh);
+    abstract double calculatePrice(boolean isFresh);
 }

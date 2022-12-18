@@ -27,7 +27,7 @@ public class EmployeePerHour implements Salary {
     }
 
     @Override
-    public void salary() {
+    public void printSalary() {
         System.out.println("An hourly wage worker has a salary = " + salary * hours + " UAH");
 
     }

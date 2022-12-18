@@ -16,7 +16,7 @@ public class EmployeeFixSalary implements Salary {
     }
 
     @Override
-    public void salary() {
+    public void printSalary() {
         System.out.println("An employee with a fixed monthly salary has a salary = " + salary + " UAH");
     }
 }

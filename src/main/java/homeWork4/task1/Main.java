@@ -7,8 +7,8 @@ public class Main {
         Rose rose2 = new Rose("rose", "red", 100, false);
         rose.describeRose();
         rose2.describeRose();
-        rose.calculatePrice(true);
-        rose2.calculatePrice(true);
+        System.out.println("The price of 1 fresh rose with spikes: " + rose.calculatePrice(true));
+        System.out.println("The price of 1 stale rose: " + rose2.calculatePrice(true));
 
         System.out.println("============");
 
@@ -16,8 +16,8 @@ public class Main {
         Tulip tulip2 = new Tulip("tulip", "white", 80, false);
         tulip.describeTulip();
         tulip2.describeTulip();
-        tulip.calculatePrice(true);
-        tulip2.calculatePrice(false);
+        System.out.println("The price of 1 fresh tulip with leaves: " + tulip.calculatePrice(true));
+        System.out.println("The price of 1 stale tulip without leaves: " + tulip2.calculatePrice(false));
 
         System.out.println("============");
 
@@ -27,9 +27,9 @@ public class Main {
         chamomile.describeChamomile();
         chamomile2.describeChamomile();
         chamomile3.describeChamomile();
-        chamomile.calculatePrice(true);
-        chamomile2.calculatePrice(true);
-        chamomile3.calculatePrice(false);
+        System.out.println("The price of 1 fresh large chamomile: " + + chamomile.calculatePrice(true));
+        System.out.println("The price of 1 fresh medium chamomile: " + chamomile2.calculatePrice(true));
+        System.out.println("The price of 1 stale small chamomile: " + chamomile3.calculatePrice(false));
 
         System.out.println("============");
 
@@ -39,8 +39,8 @@ public class Main {
         peony.describePeony();
         peony2.describePeony();
         peony3.describePeony();
-        peony.calculatePrice(true);
-        peony2.calculatePrice(true);
-        peony3.calculatePrice(false);
+        System.out.println("The price of 1 fresh white peony: " + peony.calculatePrice(true));
+        System.out.println("The price of 1 fresh red peony: " + peony2.calculatePrice(true));
+        System.out.println("The price of 1 stale peony: " + peony3.calculatePrice(false));
     }
 }
