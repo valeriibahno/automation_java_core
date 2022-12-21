@@ -1,14 +1,12 @@
 package homeWork6.task3;
 
-public class MyException extends Exception{
+import org.apache.log4j.Logger;
 
+public class MyException extends Exception {
+
+    private static final Logger logger = Logger.getLogger(MyException.class);
     public MyException() {
         super();
-        System.out.println("MyException 1");
-    }
-
-    public MyException(String s) {
-        super(s);
-        System.out.println("MyException 2");
+        logger.info("Division by zero is impossible");
     }
 }

@@ -1,33 +1,59 @@
 package homeWork6.task3;
 
+import org.apache.log4j.Logger;
+
 public class Methods {
 
-    //3) Створити свій Exception(MyException). Створити клас Methods, Описати в ньому методи , які б
-    //розраховували додавання, віднімання, множення, ділення двох змінних. При цьому врахувати :
-    //Якщо a<0 і b<0 викидаємо IllegalArgumentException
-    //Якщо a=0 і b!=0 або a!=0 і b=0 викидаємо ArithmeticException
-    //Якщо a=0 і b=0 викидаємо IllegalAccessException
-    //Якщо a>0 і b>0 викидаємо MyException
-    //Протестувати всі можливі варіанти, і вивести все на консоль.
+    private static final Logger logger = Logger.getLogger(Methods.class);
 
     public void plus(int number1, int number2) {
-        System.out.println("Sum = " + (number1 + number2));
+
+        if(number1 < 0 && number2 < 0) {
+            try {
+                throw new IllegalArgumentException();
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            }
+        }
+        logger.info("Sum = " + (number1 + number2));
     }
 
     public void minus(int number1, int number2) {
-        System.out.println("Subtraction = " + (number1 - number2));
+
+        if((number1 == 0 && number2 != 0) | (number1 != 0 && number2 == 0)) {
+            try {
+                throw new ArithmeticException();
+            } catch (ArithmeticException e) {
+                e.printStackTrace();
+            }
+        }
+        logger.info("Subtraction = " + (number1 - number2));
     }
 
     public void multiply(int number1, int number2) {
-        System.out.println("Multiplication = " + (number1 * number2));
+
+        if(number1 == 0 && number2 == 0) {
+            try {
+                throw new IllegalAccessException();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
+        logger.info("Multiplication = " + (number1 * number2));
     }
+
     public void divide(int number1, int number2) {
 
         if(number2 == 0) {
-            System.out.println("Division by zero is impossible");
+            try {
+                throw new MyException();
+            } catch (MyException e) {
+                e.printStackTrace();
+            }
+            logger.info("Division by zero is impossible");
         }
         else {
-            System.out.println("Division = " + (double) number1 / number2);
+            logger.info("Division = " + (double) number1 / number2);
         }
     }
 }
