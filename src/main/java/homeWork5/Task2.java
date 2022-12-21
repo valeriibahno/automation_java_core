@@ -13,7 +13,7 @@ public class Task2 {
         logger.info("Last symbol in entered text is: " + enteredText.charAt(enteredText.length() - 1));
     }
 
-    public static void verifyIsEndsOfSubstringText(String enteredText) {
+    public static void isStringEndsWithText(String enteredText) {
 
         Scanner scanner = new Scanner(System.in);
         logger.info("Enter end of string: ");
@@ -27,7 +27,7 @@ public class Task2 {
         }
     }
 
-    public static void verifyIsStartOfSubstringText(String enteredText) {
+    public static void isStringStartWithText(String enteredText) {
 
         Scanner scanner = new Scanner(System.in);
         logger.info("Enter start of string: ");
@@ -41,7 +41,7 @@ public class Task2 {
         }
     }
 
-    public static void verifyIsContainsSubstringInText(String enteredText) {
+    public static void isContainsSubstringInText(String enteredText) {
 
         Scanner scanner = new Scanner(System.in);
         logger.info("Enter substring for verifying in the entered text: ");
@@ -116,9 +116,9 @@ public class Task2 {
         String enteredText = scanner.nextLine();
 
         printLastSymbolInText(enteredText);
-        verifyIsEndsOfSubstringText(enteredText);
-        verifyIsStartOfSubstringText(enteredText);
-        verifyIsContainsSubstringInText(enteredText);
+        isStringEndsWithText(enteredText);
+        isStringStartWithText(enteredText);
+        isContainsSubstringInText(enteredText);
         findPositionOfSubstringInText(enteredText);
         replaceSymbolsInText(enteredText);
         upperCaseForText(enteredText);
