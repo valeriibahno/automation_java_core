@@ -36,6 +36,7 @@ public enum Months {
     }
 
     public static List<Months> getMonthsInSeason(Seasons season) {
+
         List<Months> listMonths = new ArrayList<>();
         switch (season) {
             case WINTER:
@@ -55,21 +56,4 @@ public enum Months {
         }
         return listMonths;
     }
-
-//    public static List<Months> getMonthsWithEqualDays(Months month) {
-//
-//        List<Months> listMonths = new ArrayList<>();
-//        for (int i = 0; i < Months.values().length; i++) {
-//            if(month.getDays() == 30) {
-//                listMonths = Arrays.asList(Months.APRIL, Months.JUNE, Months.SEPTEMBER, Months.NOVEMBER);
-//            } else if (month.getDays() == 31) {
-//                listMonths = Arrays.asList(Months.JANUARY, Months.MARCH, Months.MAY, Months.JULY, Months.AUGUST, Months.OCTOBER, Months.DECEMBER);
-//            } else if (month.getDays() == 28) {
-//                listMonths = Arrays.asList(Months.FEBRUARY);
-//            } else {
-//                listMonths = null;
-//            }
-//        }
-//        return listMonths;
-//    }
 }
