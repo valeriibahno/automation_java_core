@@ -28,9 +28,6 @@ public class Purchase {
 
     @Override
     public String toString() {
-        return "Purchase{" +
-                "name='" + name + '\'' +
-                ", quantity=" + quantity +
-                '}';
+        return "Purchase: [name = '" + name + "', quantity = '" + quantity + "']";
     }
 }

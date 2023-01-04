@@ -26,9 +26,9 @@ public class Main {
             quantity = scanner.nextInt();
             logger.info("Enter name of purchase:");
             name = scanner.next();
-//            if(name.equalsIgnoreCase("stop")) {
-//                break;
-//            }
+            if(name.equalsIgnoreCase("stop")) {
+                break;
+            }
             purchases.add(new Purchase(name, quantity));
             i++;
         } while(!name.equalsIgnoreCase("stop"));
