@@ -24,6 +24,9 @@ public class Main {
             price = scanner.nextDouble();
             logger.info("Enter model of laptop:");
             model = scanner.next();
+            if(model.equalsIgnoreCase("stop")) {
+                break;
+            }
             listLaptops.add(new Laptop(model, price));
             i++;
         } while(!model.equalsIgnoreCase("stop"));
