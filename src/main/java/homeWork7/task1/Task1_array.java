@@ -31,18 +31,13 @@ public class Task1_array {
     }
 
     public static void returnWordsLengthMoreFiveLetters(String[] arrayWords) {
-            for (String arrayWord : arrayWords) {
-                try {
-                if (arrayWord == null) {
-                    logger.info("This word is null");
-                }
-                else if (arrayWord.length() > 5) {
-                    logger.info("Word, which length more 5 letters: " + arrayWord);
-                }
-                } catch (NullPointerException e) {
-                    logger.error("Array is empty!");
-                }
+        for (String arrayWord : arrayWords) {
+            if (arrayWord == null) {
+                logger.info("This word is null");
+            } else if (arrayWord.length() > 5) {
+                logger.info("Word, which length more 5 letters: " + arrayWord);
             }
+        }
     }
 
     public static void main(String[] args) {
