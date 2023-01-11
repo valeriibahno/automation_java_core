@@ -1,9 +1,5 @@
 package homeWork7.task2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public enum Months {
 
     JANUARY(31, Seasons.WINTER),
@@ -33,27 +29,5 @@ public enum Months {
 
     public Seasons getSeasons() {
         return seasons;
-    }
-
-    public static List<Months> getMonthsInSeason(Seasons season) {
-
-        List<Months> listMonths = new ArrayList<>();
-        switch (season) {
-            case WINTER:
-                listMonths = Arrays.asList(Months.DECEMBER, Months.JANUARY, Months.FEBRUARY);
-                break;
-            case SPRING:
-                listMonths = Arrays.asList(Months.MARCH, Months.APRIL, Months.MAY);
-                break;
-            case SUMMER:
-                listMonths = Arrays.asList(Months.JUNE, Months.JULY, Months.AUGUST);
-                break;
-            case AUTUMN:
-                listMonths = Arrays.asList(Months.SEPTEMBER, Months.OCTOBER, Months.NOVEMBER);
-                break;
-            default:
-                System.out.println("You entered fault month");
-        }
-        return listMonths;
     }
 }

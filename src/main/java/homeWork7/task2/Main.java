@@ -21,18 +21,21 @@ public class Main {
 
     public static void printMonthsWithSameSeason(String month) {
 
-        Months[] months = Months.values();
         Seasons season = null;
-        try {
-            for (Months value : months) {
-                if (month.equalsIgnoreCase(value.name())) {
-                    season = value.getSeasons();
-                }
+        List<Months> listMonths = new ArrayList<>();
+
+        for (Months value : Months.values()) {
+            if (month.equalsIgnoreCase(value.name())) {
+                season = value.getSeasons();
             }
-            logger.info("Months in the same season : " + Months.getMonthsInSeason(Seasons.valueOf(season.toString())));
-        } catch (NullPointerException exception) {
-            logger.error("Incorrect month");
         }
+
+        for (Months item: Months.values()) {
+            if (season == item.getSeasons()) {
+                listMonths.add(item);
+            }
+        }
+        logger.info("Months in the same season : " + listMonths);
     }
 
     public static void printMonthsWithEqualsDays(String month) {
