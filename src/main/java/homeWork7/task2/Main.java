@@ -45,14 +45,10 @@ public class Main {
             logger.error("You entered wrong month");
         }
 
-        if(countDays == 30) {
-            listMonths = Arrays.asList(Months.APRIL, Months.JUNE, Months.SEPTEMBER, Months.NOVEMBER);
-        } else if (countDays == 31) {
-            listMonths = Arrays.asList(Months.JANUARY, Months.MARCH, Months.MAY, Months.JULY, Months.AUGUST, Months.OCTOBER, Months.DECEMBER);
-        } else if (countDays == 28) {
-            listMonths = Arrays.asList(Months.FEBRUARY);
-        } else {
-            listMonths = null;
+        for (Months item: Months.values()) {
+            if (countDays == item.getDays()) {
+                listMonths.add(item);
+            }
         }
         logger.info("Months with equals days - " + listMonths);
     }
