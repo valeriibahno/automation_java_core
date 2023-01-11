@@ -2,25 +2,21 @@ package homeWork7.task2;
 
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Stream;
 
 public class Main {
     private static final Logger logger = Logger.getLogger(Main.class);
 
-    public static boolean verifyIsMonthExists(String month) {
+    public static void verifyIsMonthExists(String month) {
 
-        boolean existsMonth = false;
-        for (Months value: Months.values()) {
-            if (month.equalsIgnoreCase(value.name())) {
-                logger.info("Month '" + value + "' exists");
-                existsMonth = true;
-                break;
-            }
-        }
-        return existsMonth;
+        // Arrays.asList(Months.values()).contains(month.toUpperCase()) - always return false, because 'List<Months>' may not contain objects of type 'String' - month
+        // And also toUpperCase() doesn't help to cast into type Months...
+
+        logger.info("Result - " + Arrays.asList(Months.values()).contains(month.toUpperCase()));
+
+        boolean existsMonth = Stream.of(Months.values()).anyMatch(item -> item.name().equals(month.toUpperCase()));
+        logger.info("Month: '" + month.toUpperCase() + "' exists: " + existsMonth);
     }
 
     public static void printMonthsWithSameSeason(String month) {
@@ -104,7 +100,7 @@ public class Main {
         String month = scanner.next();
 
         logger.info("======== 1 method =============");
-        logger.info("Your entered month exists - " + verifyIsMonthExists(month));
+        verifyIsMonthExists(month);
         logger.info("======== 2 method =============");
         printMonthsWithSameSeason(month);
         logger.info("======== 3 method =============");
