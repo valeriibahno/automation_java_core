@@ -10,11 +10,6 @@ public class Main {
 
     public static void verifyIsMonthExists(String month) {
 
-        // Arrays.asList(Months.values()).contains(month.toUpperCase()) - always return false, because 'List<Months>' may not contain objects of type 'String' - month
-        // And also toUpperCase() doesn't help to cast into type Months...
-
-        logger.info("Result - " + Arrays.asList(Months.values()).contains(month.toUpperCase()));
-
         boolean existsMonth = Stream.of(Months.values()).anyMatch(item -> item.name().equals(month.toUpperCase()));
         logger.info("Month: '" + month.toUpperCase() + "' exists: " + existsMonth);
     }
