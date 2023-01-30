@@ -92,11 +92,11 @@ public class Person {
 
     public void myMethod(String a, int... args) {
 
-        logger.info("myMethod - " + a + Arrays.toString(args));
+        logger.info("myMethod - " + a + " and array: " + Arrays.toString(args));
     }
 
     public void myMethod(String... args) {
 
-        logger.info("myMethod - " + Arrays.toString(args));
+        logger.info("myMethod - array: " + Arrays.toString(args));
     }
 }
