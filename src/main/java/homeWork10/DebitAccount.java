@@ -1,4 +1,4 @@
-package homeWork10.task1;
+package homeWork10;
 
 public class DebitAccount extends Account<String> {
 

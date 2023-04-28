@@ -1,4 +1,4 @@
-package homeWork10.task1;
+package homeWork10;
 
 import org.apache.log4j.Logger;
 
